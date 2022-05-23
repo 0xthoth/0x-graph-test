@@ -1,6 +1,15 @@
-type ExampleEntity @entity {
+type Token @entity {
   id: ID!
-  count: BigInt!
-  user: Bytes! # address
-  pid: BigInt! # uint256
+}
+
+type DailyVault @entity {
+  id: ID!
+  timestamp: BigInt!
+  token: Token!
+  amount: BigDecimal!
+  amountValue: BigDecimal!
+  reward: BigDecimal!
+  rewardValue: BigDecimal!
+  totalVaule: BigDecimal!
+  bswRate: BigDecimal!
 }

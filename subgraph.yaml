@@ -8,7 +8,7 @@ dataSources:
     source:
       address: "0xDbc1A13490deeF9c3C12b44FE77b503c1B061739"
       abi: MasterChef
-      startBlock: 17900121 
+      startBlock: 17899567  
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -21,6 +21,12 @@ dataSources:
       abis:
         - name: MasterChef
           file: ./abis/MasterChef.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+        - name: BiswapPair
+          file: ./abis/BiswapPair.json
+        - name: ChainLink
+          file: ./abis/ChainLink.json
       eventHandlers:
         - event: Deposit(indexed address,indexed uint256,uint256)
           handler: handleDeposit
